@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Profile() {
 	return (
 		<div className="flex min-h-screen items-center justify-center bg-black text-white">
-			<h1 className="text-4xl font-bold">Welcome to Next.js!</h1>
+			<h1 className="text-4xl font-bold">User Profile</h1>
 		</div>
 	);
 }
