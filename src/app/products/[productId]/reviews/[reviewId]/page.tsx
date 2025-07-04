@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export default async function ReviewDetails({
 	params,
 }: {
@@ -5,6 +7,9 @@ export default async function ReviewDetails({
 }) {
 	const { productId, reviewId } = await params;
 
+	if (parseInt(reviewId) > 100) {
+		notFound();
+	}
 	return (
 		<div className="flex flex-col gap-10 min-h-screen items-center justify-center bg-black text-white">
 			<h1 className="text-4xl font-bold">Review Details</h1>
