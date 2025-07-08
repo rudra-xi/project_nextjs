@@ -1,10 +1,18 @@
 import { notFound } from "next/navigation";
 
+const getRandomNumber = (count: number) => {
+	return Math.floor(Math.random() * count);
+};
+
 export default async function ReviewDetails({
 	params,
 }: {
 	params: Promise<{ productId: string; reviewId: string }>;
 }) {
+	const random = getRandomNumber(2);
+	if (random === 1) {
+		throw new Error("Error Loading Review Details.");
+	}
 	const { productId, reviewId } = await params;
 
 	if (parseInt(reviewId) > 100) {
