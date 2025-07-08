@@ -16,6 +16,12 @@ export default function Home() {
 			>
 				Products
 			</Link>
+			<Link
+				href={"/order-product"}
+				className="text-blue-500 hover:underline mt-2"
+			>
+				Order Product
+			</Link>
 
 			<div className="mt-8 flex flex-col items-center">
 				<Link
