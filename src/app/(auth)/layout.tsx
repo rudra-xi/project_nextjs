@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 const navLinks = [
 	{ href: "/login", label: "Login" },
@@ -15,24 +14,12 @@ export default function AuthLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const [input, setInput] = useState("");
 	const pathname = usePathname();
 	return (
 		<section>
 			<header>
 				<nav className="bg-gray-800 text-white p-4">
 					<p>Navbar Content for Auth</p>
-
-					{/* -------------------------<template.tsx>--------------------------- */}
-					<div>
-						<input
-							className="border border-gray-300 p-2 rounded w-full"
-							type="text"
-							value={input}
-							onChange={(e) => setInput(e.target.value)}
-						/>
-					</div>
-					{/* -------------------------<template.tsx>--------------------------- */}
 
 					<div className="flex justify-center mt-6">
 						{navLinks.map((link) => {
